@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-  
-   
+
     {% for game in games %}
         {{ game.game_name }} <br>
         {{ game.category }}<br>
@@ -11,4 +10,5 @@
         <img class="game-image" src="{{ game.image_url}}" alt="{{ game.game_name }}"><br>
         {{ game.description }}
     {% endfor %}
+
 {% endblock %}
