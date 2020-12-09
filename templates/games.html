@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Games</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+  
+   
     {% for game in games %}
         {{ game.game_name }} <br>
         {{ game.category }}<br>
@@ -15,5 +11,4 @@
         <img class="game-image" src="{{ game.image_url}}" alt="{{ game.game_name }}"><br>
         {{ game.description }}
     {% endfor %}
-</body>
-</html>
+{% endblock %}
