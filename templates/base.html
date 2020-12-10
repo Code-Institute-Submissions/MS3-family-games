@@ -10,6 +10,39 @@
     {% endblock %}
 </head>
 <body>
+
+    <header>
+            
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="center hide-on-med-and-down">
+                    <li><a href="sass.html">Home</a></li>
+                    <li><a href="badges.html">Games</a></li>
+                    <li><a href="collapsible.html">Add Game</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Home</a></li>
+            <li><a href="badges.html">Games</a></li>
+            <li><a href="collapsible.html">Add Game</a></li>
+
+        </ul>
+
+        <div class="row">
+                <div class="col s4">
+                    <img class="responsive-img" src="https://www.signupgenius.com/cms/socialMediaImages/family-night-game-ideas-facebook-1200x630.png">
+                </div>
+                 <div class="col s4">
+                    <img class="responsive-img" src="https://www.siparent.com/wp-content/uploads/2020/04/family-game-night.jpg">
+                </div>
+                 <div class="col s4">
+                    <img class="responsive-img" src="https://img.dtcn.com/image/21oak/family-board-games-featured-resized-1200x630-c-ar1.91-n.jpg">
+                </div>
+            </div>
+    </header>
     {% block content %}
     {% endblock %}
 
