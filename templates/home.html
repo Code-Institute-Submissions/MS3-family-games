@@ -13,8 +13,8 @@
         </div>
     </div>
 
-    <h2>Great Time Together</h2>
-    <p class="intro">
+    <h3 class="center">Great Time Together</h3>
+    <p class="intro center">
         Time spent together with your family creates loyalty to each other and a feeling of support and belonging.
         Our children grow up fast so we should use the time we have meaningfully.  If we manage to spend time 
         together as a family, we will make it easier for our children to share their thoughts an worries when 
@@ -23,4 +23,29 @@
         ways to create fun and unforgettable memories.
      </p>
 
+     <h5 class="center"><strong>Recently Added Games</strong></h5>
+        <div class="row">
+            {% for game in games %}
+        
+                <div class="col s12 m4">
+                    <div class="card large">
+                        <div class="card-content center">
+                            <span class="card-title activator grey-text text-darken-4"><strong>{{ game.game_name }}</strong></span>
+                        </div>
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="{{ game.image_url}}">
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{ game.game_name }}<i class="material-icons right">close</i></span>
+                            <span>Category: {{ game.category }}</span><br>
+                            <span>Age: {{ game.age_range }}</span><br>
+                            <span>Number of players: {{ game.number_of_players }}</span>
+                            <p>{{ game.description }}</p>
+                            <a class="waves-effect waves-light btn" href="{{ game.link_to_shop }}" target="_blank">Buy Here</a>
+                        </div>
+                    </div>
+                </div>
+            
+            {% endfor %}
+        </div>
 {% endblock %}
