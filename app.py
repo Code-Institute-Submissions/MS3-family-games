@@ -31,6 +31,26 @@ def get_games():
     return render_template("games.html", games=games)
 
 
+@app.route("/add_game", methods=["GET", "POST"])
+def add_game():
+    if request.method == "POST":
+        game = {
+            "category": request.form.get("category"),
+            "game_name": request.form.get("game_name"),
+            "age_range": request.form.get("age_range"),
+            "number_of_players": request.form.get("number_of_players"),
+            "link_to_shop": request.form.get("link_to_shop"),
+            "image_url": request.form.get("image_url"),
+            "description": request.form.get("description")
+        }
+        mongo.db.games.insert_one(game)
+        flash("Game Successfully Added")
+        return redirect(url_for("home"))
+
+    games = list(mongo.db.games.find())
+    return render_template("add_game.html", games=games)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

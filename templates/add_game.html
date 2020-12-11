@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+        <div class="card ">
+            <form class="col s6" method="POST" action="{{ url_for('add_game')}}">
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="far fa-folder-open prefix"></i>
+                        <select>
+                            <option value="none" disabled selected>Choose Category</option>
+                            <option value="1">Board Game</option>
+                            <option value="2">Card Game</option>
+                            <option value="3">Physical Skill</option>
+                            <option value="4">Other</option>
+                        </select>
+                        <label for="Category">Category</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="fas fa-pencil-alt prefix"></i>
+                        <input id="game_name" name="game_name" type="text" class="validate" required>
+                        <label for="game_name">Game Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="fas fa-child prefix"></i>
+                        <input id="age_range" name="age_range" type="text" class="validate" required>
+                        <label for="age_range">Age Range</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="fas fa-users prefix"></i>
+                        <input id="number_of_players" name="number_of_players" type="text" class="validate" required>
+                        <label for="number_of_players">Number Of Players</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="fas fa-link prefix"></i>
+                        <input id="link_to_shop" name="link_to_shop" type="text" class="validate" required>
+                        <label for="link_to_shop">Link To Shop</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="far fa-image prefix"></i>
+                        <input id="image_url" name="image_url" type="text" class="validate" required>
+                        <label for="image_url">Image URL</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <i class="far fa-file-alt prefix"></i>
+                        <textarea id="description" class="materialize-textarea" max-length="1300" required></textarea>
+                        <label for="description">Description</label>
+                    </div>
+                </div>
+        
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}
