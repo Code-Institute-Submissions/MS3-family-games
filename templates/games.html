@@ -14,7 +14,7 @@
                         <img class="activator responsive-img" src="{{ game.image_url}}"> 
                     </div>
                     <div class="card-content center">
-                       <a href="" class="btn small">Edit</a>
+                       <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn small">Edit</a>
                        <a href="" class="btn small">Delete</a>
                     </div>
                         
