@@ -7,14 +7,14 @@
                 <div class="row">
                     <div class="input-field col s8 offset-s2">
                         <i class="far fa-folder-open prefix"></i>
-                        <select>
+                        <select id="category" name="category" class="validate" required>
                             <option value="none" disabled selected>Choose Category</option>
                             <option value="1">Board Game</option>
                             <option value="2">Card Game</option>
                             <option value="3">Physical Skill</option>
                             <option value="4">Other</option>
                         </select>
-                        <label for="Category">Category</label>
+                        <label for="category">Category</label>
                     </div>
                 </div>
                 <div class="row">
@@ -55,11 +55,11 @@
                 <div class="row">
                     <div class="input-field col s8 offset-s2">
                         <i class="far fa-file-alt prefix"></i>
-                        <textarea id="description" class="materialize-textarea" max-length="1300" required></textarea>
+                        <textarea id="description" name="description" class="materialize-textarea" max-length="1300" required></textarea>
                         <label for="description">Description</label>
                     </div>
                 </div>
-        
+                <button type="submit" class="btn-large text-shadow right">Add Game</button>
             </form>
         </div>
     </div>
