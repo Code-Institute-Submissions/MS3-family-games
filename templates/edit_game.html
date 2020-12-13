@@ -8,12 +8,11 @@
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="far fa-folder-open prefix"></i>
-                        <select id="category" name="category" class="validate" required>
-                            <option value="none" disabled>Choose Category</option>
-                            <option value="category">Board Game</option>
-                            <option value="category">Card Game</option>
-                            <option value="category">Physical Skill</option>
-                            <option value="category">Other</option>
+                       <select id="category_name" name="category_name" class="validate" required>
+                            <option value="" disabled selected>Choose Category</option>
+                            {% for category in categories%}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endfor %}
                         </select>
                         <label for="category">Category</label>
                     </div>

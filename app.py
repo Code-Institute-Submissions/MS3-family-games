@@ -35,7 +35,7 @@ def get_games():
 def add_game():
     if request.method == "POST":
         game = {
-            "category": request.form.get("category"),
+            "category_name": request.form.get("category_name"),
             "game_name": request.form.get("game_name"),
             "age_range": request.form.get("age_range"),
             "number_of_players": request.form.get("number_of_players"),
@@ -47,15 +47,15 @@ def add_game():
         flash("Game Successfully Added")
         return redirect(url_for("get_games"))
 
-    games = list(mongo.db.games.find())
-    return render_template("add_game.html", games=games)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_game.html", categories=categories)
 
 
 @app.route("/edit_game/<game_id>", methods=["GET", "POST"])
 def edit_game(game_id):
     if request.method == "POST":
         submit = {
-            "category": request.form.get("category"),
+            "category_name": request.form.get("category_name"),
             "game_name": request.form.get("game_name"),
             "age_range": request.form.get("age_range"),
             "number_of_players": request.form.get("number_of_players"),
@@ -68,7 +68,8 @@ def edit_game(game_id):
         return redirect(url_for("get_games"))
 
     game = mongo.db.games.find_one({"_id": ObjectId(game_id)})
-    return render_template("edit_game.html", game=game)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_game.html", game=game, categories=categories)
 
 
 @app.route("/delete_game/<game_id>")
@@ -76,7 +77,6 @@ def delete_game(game_id):
     mongo.db.games.remove({"_id": ObjectId(game_id)})
     flash("Game Successfully Deleted")
     return redirect(url_for("get_games"))
-
 
 
 if __name__ == "__main__":
