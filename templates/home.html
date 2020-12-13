@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
+
+    <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"><img src="https://www.signupgenius.com/cms/socialMediaImages/family-night-game-ideas-facebook-1200x630.png"></a>
+        <a class="carousel-item" href="#two!"><img src="https://www.siparent.com/wp-content/uploads/2020/04/family-game-night.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="https://img.dtcn.com/image/21oak/family-board-games-featured-resized-1200x630-c-ar1.91-n.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="https://www.familyvacationcritic.com/uploads/sites/19/2019/04/FamilyPlayingGame-Monkey-Business-Images-ShutterstockHERO-1.jpg"></a>
+    </div>
+
+    <!-- <div class="row">
         <div class="col s4">
             <img class="responsive-img" src="https://www.signupgenius.com/cms/socialMediaImages/family-night-game-ideas-facebook-1200x630.png">
         </div>
@@ -11,8 +19,9 @@
         <div class="col s4">
             <img class="responsive-img" src="https://img.dtcn.com/image/21oak/family-board-games-featured-resized-1200x630-c-ar1.91-n.jpg">
         </div>
-    </div>
-
+    </div> -->
+    
+    <!-- Title -->
     <h3 class="center">Great Time Together</h3>
     <p class="intro center">
         Time spent together with your family creates loyalty to each other and a feeling of support and belonging.
@@ -23,6 +32,7 @@
         ways to create fun and unforgettable memories.
      </p>
 
+     <!-- Recent games-->
      <h5 class="center"><strong>Recently Added Games</strong></h5>
         <div class="row">
             {% for game in games %}

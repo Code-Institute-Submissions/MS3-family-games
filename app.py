@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    games = list(mongo.db.games.find())
+    games = list(mongo.db.games.find().sort("_id", -1).limit(3))
     return render_template("home.html", games=games)
 
 
