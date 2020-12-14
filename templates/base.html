@@ -23,8 +23,8 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="center hide-on-med-and-down right">
                     <li><a class="waves-effect waves-light" href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a class="waves-effect waves-light" href="{{ url_for('get_games') }}"><i class="fas fa-dice"></i> Games</a></li>
-                    <li><a class="waves-effect waves-light" href="{{ url_for('add_game') }}"><i class="fas fa-plus"></i> Add Game</a></li>
+                    <li><a class="waves-effect waves-light" href="{{ url_for('games') }}"><i class="fas fa-dice"></i> Games</a></li>
+                    <li><a class="waves-effect waves-light" href="{{ url_for('add') }}"><i class="fas fa-plus"></i> Add Game</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,8 +32,8 @@
         <!-- Side navbar for mobile -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('get_games') }}">Games</a></li>
-            <li><a href="{{ url_for('add_game') }}">Add Game</a></li>
+            <li><a href="{{ url_for('games') }}">Games</a></li>
+            <li><a href="{{ url_for('add') }}">Add Game</a></li>
         </ul>
 
      </header>
