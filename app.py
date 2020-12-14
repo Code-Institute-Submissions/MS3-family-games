@@ -27,7 +27,7 @@ def home():
 
 @app.route("/games")
 def games():
-    games = list(mongo.db.games.find())
+    games = list(mongo.db.games.find().sort("game_name"))
     return render_template("games.html", games=games)
 
 
@@ -47,7 +47,7 @@ def add():
         flash("Game Successfully Added")
         return redirect(url_for("games"))
 
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = mongo.db.categories.find()
     return render_template("add.html", categories=categories)
 
 
@@ -68,7 +68,7 @@ def edit(game_id):
         return redirect(url_for("games"))
 
     game = mongo.db.games.find_one({"_id": ObjectId(game_id)})
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = mongo.db.categories.find()
     return render_template("edit.html", game=game, categories=categories)
 
 

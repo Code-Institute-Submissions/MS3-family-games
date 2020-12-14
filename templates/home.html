@@ -25,16 +25,16 @@
         <div class="row">
             {% for game in games %}
             
-                <div class="col s12 m4">
-                    <div class="card hoverable medium s12 m4">
+                <div class="col s12 m8 offset-m2 l4">
+                    <div class="card hoverable medium center">
                         <div class="card-content">
-                            <span class="card-title activator center grey-text text-darken-4"><strong>{{ game.game_name }}</strong><i class="fas fa-ellipsis-v right"></i></span>
+                            <span class="card-title activator center grey-text text-darken-4"><strong>{{ game.game_name }}</strong></span>
                         </div>
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="{{ game.image_url}}"> 
                         </div>
                         <div class="card-content center">
-                        <a class="waves-effect waves-light btn green accent-4" href="{{ game.link_to_shop }}" target="_blank">Buy Here</a>
+                            <a class="waves-effect waves-light btn text-shadow green darken-2 z-depth-3 hoverable" href="{{ game.link_to_shop }}" target="_blank">Buy Here</a>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title center grey-text text-darken-4">{{ game.game_name }}<i class="fas fa-times right"></i></span>
@@ -48,7 +48,6 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             
 

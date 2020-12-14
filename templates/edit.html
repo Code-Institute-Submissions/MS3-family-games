@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="center">Edit Game</h2>
+    <h3 class="center">Edit Game</h3>
     <div class="container">
         <div class="card ">
             <form class="col s6" method="POST" action="{{ url_for('edit', game_id=game._id)}}">
@@ -9,7 +9,7 @@
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="far fa-folder-open prefix"></i>
                        <select id="category_name" name="category_name" class="validate">
-                            <option value="" disabled selected>{{ game.category_name }}</option>
+                            <option value="{{ game.category_name }}" selected>{{ game.category_name }}</option>
                             {% for category in categories%}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endfor %}
