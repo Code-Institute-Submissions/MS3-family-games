@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center">Edit Game</h3>
+    <h3 class="center green-text text-darken-4">Edit Game</h3>
     <div class="container">
         <div class="card ">
             <form class="col s6" method="POST" action="{{ url_for('edit', game_id=game._id)}}">
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
-                        <i class="far fa-folder-open prefix"></i>
+                        <i class="far fa-folder-open green-text text-darken-4 text-shadow prefix"></i>
                        <select id="category_name" name="category_name" class="validate">
                             <option value="{{ game.category_name }}" selected>{{ game.category_name }}</option>
                             {% for category in categories%}
@@ -19,7 +19,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
-                        <i class="fas fa-pencil-alt prefix"></i>
+                        <i class="fas fa-pencil-alt green-text text-darken-4 text-shadow prefix"></i>
                         <input id="game_name" name="game_name" type="text"
                             value="{{ game.game_name }}" class="validate" required>
                         <label for="game_name">Game Name</label>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
-                        <i class="fas fa-child prefix"></i>
+                        <i class="fas fa-child green-text text-darken-4 text-shadow prefix"></i>
                         <input id="age_range" name="age_range" type="text"
                             value="{{ game.age_range }}" class="validate" required>
                         <label for="age_range">Age Range</label>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
-                        <i class="fas fa-users prefix"></i>
+                        <i class="fas fa-users green-text text-darken-4 text-shadow prefix"></i>
                         <input id="number_of_players" name="number_of_players"
                             value="{{ game.number_of_players }}" type="text" class="validate" required>
                         <label for="number_of_players">Number Of Players</label>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
-                        <i class="fas fa-link prefix"></i>
+                        <i class="fas fa-link green-text text-darken-4 text-shadow prefix"></i>
                         <input id="link_to_shop" name="link_to_shop" type="text"
                             value="{{ game.link_to_shop }}" class="validate" required>
                         <label for="link_to_shop">Link To Shop</label>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
-                        <i class="far fa-image prefix"></i>
+                        <i class="far fa-image green-text text-darken-4 text-shadow prefix"></i>
                         <input id="image_url" name="image_url" type="text"
                             value="{{ game.image_url }}" class="validate" required>
                         <label for="image_url">Image URL</label>
@@ -59,14 +59,15 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
-                        <i class="far fa-file-alt prefix"></i>
+                        <i class="far fa-file-alt green-text text-darken-4 text-shadow prefix"></i>
                         <textarea id="description" name="description" class="materialize-textarea">
                             {{- game.description -}}
                         </textarea>
                         <label for="description">Description</label>
                     </div>
                 </div>
-                <button type="submit" class="btn-large text-shadow right">Edit Game</button>
+                <button type="submit" class="btn-large green darken-4 text-shadow right">Edit Game</button>
+                <a href="{{ url_for('games')}}" class="btn-large red text-shadow z-depth-3 hoverable left">Cancel</a>
             </form>
         </div>
     </div>
