@@ -9,11 +9,9 @@ For my Data Centric Development Milestone Project I have created Family Games He
  
 ## UX
  
-This application focus on families with children. 
+This application focus on families with children. Chose light colours for nice visual look. Each game is placed in individual card.
 
  ### User Stories
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 
 - As a user, I want easy navigation, so that I can easily find what I need.
 - As a user, I want to find infomation about games and explanation how to play.
@@ -49,14 +47,14 @@ I used Balsamiq wireframes to design my project.
 - In this part you can find all added games in alphabetical order.
 - Each game is placed inside card.
 - On the front of the card user can see name of the game, game image and Buy Here button which leads straight to the shop where user can buy the game he/she likes.
-- User can click on the card to see more information: game category, age range, number of players and game description. Also 2 buttons at the bottom: Edit and Delete.
+- User can click on the card to see more information: _Game Category_, _Age Range_, _Number of Players_ and game _Description_. Also 2 buttons at the bottom: _Edit_ and _Delete_.
 
  #### Add/Edit/Delete Game
 - In this part user can fill the form with game details.
 - Form has _Choose Category_, _Game Name_, _Age Range_, _Number Of Players_, _Link To Shop_, _Image URl_(which is prefilled with default URL) and _Description_.
 - User can press _Add Game_ button to submit his form or press _Cancel_ button if changed his/her mind.
-- Edit Game form is simular to Add Game form, but is prefilled with old game information which user can update.
-- Delete button will delete game from app and Mongo DB and redirects user to Games page.
+- _Edit Game_ form is simular to _Add New Game_ form, but is prefilled with old game information which user can update.
+- _Delete_ button will delete game from app and Mongo DB and redirects user to _Games_ page.
 
 
 ### Features Left to Implement
@@ -65,6 +63,7 @@ I used Balsamiq wireframes to design my project.
 - Create Search bar.
 - Make _Link To Shop_ field optional, and remove _Buy Here_ button if that field is empty or link isn't correct.
 - Format images.
+- Add more defencing programming, e.g. to prevent accidental deletions.
 
 ## Technologies Used
 
@@ -84,7 +83,7 @@ For app development I used these technologies:
 - [GitHub](https://github.com/) - remote repository to commit and to push to staged changes.
 - [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=EAIaIQobChMIzKT4iOHQ7QIVL4BQBh1gdwwyEAAYASAAEgIdYPD_BwE) - used Heroku to deploy my project.
 - [Materialize](https://materializecss.com/) - framework used for faster development.
-
+- Font Awsome icons
 
 ## Testing
 
@@ -103,7 +102,7 @@ I used Heroku for deployment. To deploy app to Heroku I used these steps:
 - Click "Create App".
 - Choose deployment method "GitHub".
 - Insert GitHub repository name and click "Search".
-- Onece GitHub repository is found click "Connect".
+- Once GitHub repository is found click "Connect".
 - Click on "Settings" button and then "Reveal Config Vars".
 - Add these config keys(and values): 
     * IP 
@@ -140,7 +139,7 @@ I used Heroku for deployment. To deploy app to Heroku I used these steps:
 
 
 ### Acknowledgements
-This site is created for learning purpose
+This site is created for learning purposes
 Want to say thank you for:
 - Code Institute - for well prepared lessons.
 - My mentor - for great advises during project development.

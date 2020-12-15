@@ -1,3 +1,4 @@
+/* Home page introduction text */
 .intro {
     font-size: 20px;
     margin-bottom: 3rem;
@@ -15,6 +16,7 @@ main {
     flex: 1 0 auto;
   }
 
+  /* Footer and logo text */
 .brand-logo, .copyright-text{
     margin-left: 5%;
     padding-top: 2%;

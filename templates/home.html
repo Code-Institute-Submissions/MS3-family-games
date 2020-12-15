@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+    <!-- Home page images -->
     <div class="carousel carousel-slider">
         <a class="carousel-item" href="#one!"><img src="https://www.signupgenius.com/cms/socialMediaImages/family-night-game-ideas-facebook-1200x630.png" alt="Family Night"></a>
         <a class="carousel-item" href="#two!"><img src="https://www.siparent.com/wp-content/uploads/2020/04/family-game-night.jpg" alt="Family Game Night"></a>
@@ -9,7 +9,7 @@
         <a class="carousel-item" href="#four!"><img src="https://themarket.com/nz/discover/wp-content/uploads/2019/09/Monopoly-Game-Kids-1-1600x912.jpg" alt="Monopoly Game"></a>
     </div>
     
-    <!-- Title -->
+    <!-- Title/Introduction -->
     <h3 class="center">Great Time Together</h3>
     <p class="intro">
           Time spent together with your family creates loyalty to each other and a feeling of support and belonging.
@@ -27,21 +27,26 @@
             
                 <div class="col s12 m8 offset-m2 l4">
                     <div class="card hoverable medium">
+                        <!-- Front of the card -->
                         <div class="card-content">
                             <span class="card-title activator center grey-text text-darken-4"><strong>{{ game.game_name }}</strong></span>
                         </div>
+                        <!-- Card image -->
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="{{ game.image_url}}" alt="Game Image"> 
                         </div>
+                        <!-- Buy Here button -->
                         <div class="card-content center">
                             <a class="waves-effect waves-light btn text-shadow green darken-2 z-depth-3 hoverable" href="{{ game.link_to_shop }}" target="_blank">Buy Here</a>
                         </div>
+                        <!-- Back of the card, game information-->
                         <div class="card-reveal">
                             <span class="card-title center grey-text text-darken-4"><strong>{{ game.game_name }}</strong><i class="fas fa-times right"></i></span>
                             <span>Category: {{ game.category_name }}</span><br>
                             <span>Age: {{ game.age_range }}</span><br>
                             <span>Number of players: {{ game.number_of_players }}</span>
                             <p>{{ game.description }}</p>
+                            <!-- Edit/Delete buttons-->
                             <div class="center">
                                 <a href="{{ url_for('edit', game_id=game._id) }}" class="btn center small blue darken-3">Edit</a>
                                 <a href="{{ url_for('delete', game_id=game._id)}}" class="btn center small red darken-1">Delete</a>
@@ -49,8 +54,7 @@
                         </div>
                     </div>
                 </div>
-            
-
+    
             {% endfor %}
 
         </div>

@@ -3,25 +3,30 @@
     <h3 class="center">All Games</h3>
     <div class="row">
         {% for game in games %}
-    
+            <!-- Card -->
             <div class="col s12 m8 offset-m2 l4">
                 <div class="card medium hoverable">
+                    <!-- Front of the Card -->
                     <div class="card-content">
                         <span class="card-title center activator grey-text text-darken-4"><strong>{{ game.game_name }}</strong></span>
                     </div>
+                    <!-- Card Image-->
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{ game.image_url}}" alt="Game Image">
                     </div>
+                    <!-- Buy Here button-->
                     <div class="card-content center">
                         <a class="waves-effect waves-light btn text-shadow green darken-2 z-depth-3 hoverable"
                             href="{{ game.link_to_shop }}" target="_blank">Buy Here</a>
                     </div>
+                    <!-- Back of the card, game information -->
                     <div class="card-reveal">
                         <span class="card-title center grey-text text-darken-4"><strong>{{ game.game_name }}</strong><i class="fas fa-times right"></i></span>
                         <span>Category: {{ game.category_name }}</span><br>
                         <span>Age: {{ game.age_range }}</span><br>
                         <span>Number of players: {{ game.number_of_players }}</span>
                         <p>{{ game.description }}</p>
+                        <!-- Edit/Delete buttons-->
                         <div class="center">
                             <a href="{{ url_for('edit', game_id=game._id) }}" class="btn center small blue darken-3">Edit</a>
                             <a href="{{ url_for('delete', game_id=game._id)}}" class="btn center small red darken-1">Delete</a>

@@ -5,6 +5,7 @@
     <div class="container">
         <div class="card ">
             <form class="col s6" method="POST" action="{{ url_for('edit', game_id=game._id)}}">
+                <!-- Category Selection-->
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="far fa-folder-open green-text text-darken-4 text-shadow prefix"></i>
@@ -17,6 +18,7 @@
                         <label for="category_name">Category</label>
                     </div>
                 </div>
+                <!-- Game Name -->
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="fas fa-pencil-alt green-text text-darken-4 text-shadow prefix"></i>
@@ -25,6 +27,7 @@
                         <label for="game_name">Game Name</label>
                     </div>
                 </div>
+                <!-- Age Range-->
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="fas fa-child green-text text-darken-4 text-shadow prefix"></i>
@@ -33,6 +36,7 @@
                         <label for="age_range">Age Range</label>
                     </div>
                 </div>
+                 <!-- Number of Players -->
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="fas fa-users green-text text-darken-4 text-shadow prefix"></i>
@@ -41,6 +45,7 @@
                         <label for="number_of_players">Number Of Players</label>
                     </div>
                 </div>
+                <!-- Link To Shop -->
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="fas fa-link green-text text-darken-4 text-shadow prefix"></i>
@@ -49,6 +54,7 @@
                         <label for="link_to_shop">Link To Shop</label>
                     </div>
                 </div>
+                <!-- Image URL -->
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="far fa-image green-text text-darken-4 text-shadow prefix"></i>
@@ -57,6 +63,7 @@
                         <label for="image_url">Image URL</label>
                     </div>
                 </div>
+                <!-- Description-->
                 <div class="row">
                     <div class="input-field col s10 m8 offset-m2">
                         <i class="far fa-file-alt green-text text-darken-4 text-shadow prefix"></i>
@@ -66,6 +73,7 @@
                         <label for="description">Description</label>
                     </div>
                 </div>
+                <!-- Submit/Cancel Buttons -->
                 <button type="submit" class="btn-large green darken-4 text-shadow right">Edit Game</button>
                 <a href="{{ url_for('games')}}" class="btn-large red text-shadow z-depth-3 hoverable left">Cancel</a>
             </form>

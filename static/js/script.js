@@ -1,9 +1,9 @@
 /* Materialize Scripts */
 
 $(document).ready(function(){
-    $('.sidenav').sidenav();
-    $('select').formSelect();
-    $('.carousel.carousel-slider').carousel({
+    $('.sidenav').sidenav(); // Sidenav functionality
+    $('select').formSelect(); // Select input in forms
+    $('.carousel.carousel-slider').carousel({ //Carousel
         fullWidth: true,
         indicators: true
     });
