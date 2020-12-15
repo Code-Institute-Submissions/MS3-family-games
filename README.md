@@ -92,15 +92,33 @@ For app development I used these technologies:
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
-
+I used Heroku for deployment. To deploy app to Heroku I used these steps:
+- Create Flask app on GitPod.
+- Tell Heroku which applications and dependancies are required to run the app ```pip3 freeze --local > requirements.txt```
+- Tell Heroku which file run the app ```echo web: python app.py > Procfile```
+- Go to Heroku.com and log in.
+- On Heroku dashboard(right corner) click "Create a New App".
+- App name is "family-games" all in lower cases.
+- Choose closest region (Europe).
+- Click "Create App".
+- Choose deployment method "GitHub".
+- Insert GitHub repository name and click "Search".
+- Onece GitHub repository is found click "Connect".
+- Click on "Settings" button and then "Reveal Config Vars".
+- Add these config keys(and values): 
+    * IP 
+    * PORT 
+    * SECRET_KEY
+    * MONGO_URI
+    * MONGO_DBNAME
+- Go to GitPod and in terminal window:
+    * Add requirements.txt
+    * Commit changes
+    * Add Procfile
+    * Commit changes
+    * Push changes to GitHub
+- Go back to Heroku
+- On deploy section click "Enable Automatic Deploy" then "Deploy Branch"
 
 ## Credits
 
