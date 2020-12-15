@@ -37,8 +37,6 @@ I used Balsamiq wireframes to design my project.
 ![Add Game Mobile Device](wireframes/AddGamePhone.png)
 
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
 
@@ -66,10 +64,11 @@ In this section, you should go over the different parts of your project, and des
 - Create user profile page where user can save and view chosen games.
 - Create Search bar.
 - Make _Link To Shop_ field optional, and remove _Buy Here_ button if that field is empty or link isn't correct.
+- Format images.
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+For app development I used these technologies:
 
 - [JQuery](https://jquery.com) - to simplify DOM manipulation.
 - [JavaScript](https://www.javascript.com/) - to make application interactive.
@@ -82,28 +81,14 @@ In this section, you should mention all of the languages, frameworks, libraries,
 - [MongoDB](https://www.mongodb.com/) - used MongoDB Atlas to store all games data.
 - [GitPod](https://www.gitpod.io/) - to write code for my project.
 - [Git Version Control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - to record changes made to my code.
-- [GitHub]() - remote repository to commit and to push to staged changes.
-- [Heroku]() - used Heroku to deploy my project.
+- [GitHub](https://github.com/) - remote repository to commit and to push to staged changes.
+- [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=EAIaIQobChMIzKT4iOHQ7QIVL4BQBh1gdwwyEAAYASAAEgIdYPD_BwE) - used Heroku to deploy my project.
+- [Materialize](https://materializecss.com/) - framework used for faster development.
+
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+ __[Testing Write Up](testing.md)__
 
 ## Deployment
 
@@ -120,11 +105,25 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- All JavaScript code wasn't written by me. Some coppied from Meterialize for better forms, carousel and navbar functionality. Other part, coppied from Code Institute lessons, improves select options functionality.
+- All Python code written by me
+- This app is created using Materialize framework for design and responsiveness
 
 ### Media
-- The photos used in this site were obtained from ...
+- The photos used in this site were obtained from:
+[unsplash.com](https://images.unsplash.com)
+[Sign up genius](https://www.signupgenius.com/cms/socialMediaImages/family-night-game-ideas-facebook-1200x630.png)
+[siparent](https://www.siparent.com/wp-content/uploads/2020/04/family-game-night.jpg)
+[dtcn](https://img.dtcn.com/image/21oak/family-board-games-featured-resized-1200x630-c-ar1.91-n.jpg)
+[the market](https://themarket.com/nz/discover/wp-content/uploads/2019/09/Monopoly-Game-Kids-1-1600x912.jpg)
+
+- The image URLs for cards depends on users input(most of existing images were taken from [Amazon](https://www.amazon.co.uk/?&tag=hydraamazonav-21&ref=pd_sl_781ozcfkw8_e&adgrpid=52740778523&hvpone=&hvptwo=&hvadid=259053350854&hvpos=&hvnetw=g&hvrand=11621843773297804471&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1006984&hvtargid=kwd-10573980&hydadcr=13724_1720403&gclid=EAIaIQobChMI7oiv9t7Q7QIVBuvtCh2BeQ-yEAAYASAAEgKhIfD_BwE))
+- Cards content coppied from [Amazon](https://www.amazon.co.uk/?&tag=hydraamazonav-21&ref=pd_sl_781ozcfkw8_e&adgrpid=52740778523&hvpone=&hvptwo=&hvadid=259053350854&hvpos=&hvnetw=g&hvrand=11621843773297804471&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1006984&hvtargid=kwd-10573980&hydadcr=13724_1720403&gclid=EAIaIQobChMI7oiv9t7Q7QIVBuvtCh2BeQ-yEAAYASAAEgKhIfD_BwE)
+
 
 ### Acknowledgements
-
-- I received inspiration for this project from X
+This site is created for learning purpose
+Want to say thank you for:
+- Code Institute - for well prepared lessons.
+- My mentor - for great advises during project development.
+- Slack community - found a lot of information there.
