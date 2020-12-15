@@ -30,9 +30,6 @@ footer {
     margin-top: 3rem;
 }
 
-.table-of-contents a {
-    letter-spacing: 0.4px;
-}
 
 /* Media Query for Mobile Devices */ 
     @media (max-width: 480px) { 
